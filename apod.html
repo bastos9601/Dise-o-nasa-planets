@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Nasa Planets - APOD</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: #181c2f;
+            color: #fff;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .apod-header {
+            background: #181c2f;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #22243a;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 2rem 0.5rem 2rem;
+        }
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ffe14b;
+            letter-spacing: 2px;
+        }
+        .menu-btn {
+            background: #ffe14b;
+            color: #181c2f;
+            border: none;
+            border-radius: 8px;
+            padding: 0.7rem 1.5rem;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .menu-icon {
+            font-size: 1.3rem;
+        }
+        .arrow {
+            font-size: 1rem;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: #fff;
+            min-width: 220px;
+            box-shadow: 0 8px 16px 0 #0003;
+            border-radius: 10px;
+            z-index: 1;
+            margin-top: 8px;
+            padding: 0.5rem 0;
+        }
+        .dropdown-content a {
+            color: #25304a;
+            padding: 0.7rem 1.2rem;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            font-size: 1.1rem;
+            border-bottom: 1px solid #f0f0f0;
+            transition: background 0.2s;
+        }
+        .dropdown-content a:last-child {
+            border-bottom: none;
+        }
+        .dropdown-content a:hover {
+            background-color: #f5f5f5;
+        }
+        .dropdown:hover .dropdown-content,
+        .dropdown:focus-within .dropdown-content {
+            display: block;
+        }
+        .icon {
+            font-size: 1.3rem;
+        }
+        .apod-section {
+            background: #13162b;
+            border-radius: 12px;
+            padding: 2rem 1rem 2.5rem 1rem;
+            max-width: 420px;
+            margin: 2rem auto 0 auto;
+            box-shadow: 0 0 10px #0003;
+            text-align: center;
+        }
+        .apod-section h2 {
+            color: #ffe14b;
+            font-size: 1.5rem;
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            justify-content: center;
+        }
+        .apod-section img {
+            width: 90%;
+            max-width: 300px;
+            border-radius: 12px;
+            margin-bottom: 1.2rem;
+            margin-top: 0.5rem;
+            box-shadow: 0 0 10px #0006;
+        }
+        .apod-section .apod-title {
+            color: #fff;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 0.7rem;
+        }
+        .apod-section .apod-desc {
+            color: #fff;
+            font-size: 1rem;
+            text-align: justify;
+            margin: 0 auto;
+            max-width: 95%;
+        }
+    </style>
+</head>
+<body>
+    <header class="apod-header">
+        <span class="logo">Nasa Planets</span>
+        <div class="dropdown">
+            <button class="menu-btn">
+                <span class="menu-icon">&#9776;</span> APOD (Service) <span class="arrow">&#9660;</span>
+            </button>
+            <div class="dropdown-content">
+                <a href="sistema-solar.html"><span class="icon">☀</span> sistema-solar</a>
+                <a href="quiz.html"><span class="icon">❓</span> Preguntas</a>
+                <a href="apod.html"><span class="icon">⭐</span> APOD (Service)</a>
+                <a href="asteroides.html"><span class="icon">🚀</span> Asteroides</a>
+                <a href="cazador.html"><span class="icon">🎮</span> Cazador de Asteroides</a>
+                <a href="index.html"><span class="icon">🏠</span> secciones</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="apod-section">
+            <h2><span class="emoji">🛰️</span> Imagen Astronómica del Día<br>(APOD)</h2>
+            <img src="https://apod.nasa.gov/apod/image/1901/LRO_Lunar_Farside_960.jpg" alt="Lunar Farside">
+            <div class="apod-title">Lunar Farside</div>
+            <div class="apod-desc">
+                Tidally locked in synchronous rotation, the Moon always presents its familiar nearside to denizens of planet Earth. From lunar orbit, the Moon's farside can become familiar, though. In fact this sharp picture, a mosaic from the Lunar Reconnaissance Orbiter's wide angle camera, is centered on the lunar farside. Part of a global mosaic of over 15,000 images acquired ...
+            </div>
+        </section>
+    </main>
+</body>
+</html> 

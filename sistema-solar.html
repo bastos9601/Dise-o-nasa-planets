@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Nasa Planets - Sistema Solar</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: #181c2f;
+            color: #fff;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .solar-header {
+            background: #181c2f;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #22243a;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 2rem 0.5rem 2rem;
+        }
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ffe14b;
+            letter-spacing: 2px;
+        }
+        .menu-btn {
+            background: #ffe14b;
+            color: #181c2f;
+            border: none;
+            border-radius: 8px;
+            padding: 0.7rem 1.5rem;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .menu-icon {
+            font-size: 1.3rem;
+        }
+        .arrow {
+            font-size: 1rem;
+        }
+        .solar-section {
+            background: #13162b;
+            border-radius: 12px;
+            padding: 2rem;
+            max-width: 500px;
+            margin: 2rem auto 0 auto;
+            box-shadow: 0 0 10px #0003;
+        }
+        .solar-section h2 {
+            color: #ffe14b;
+            font-size: 1.7rem;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+        }
+        .solar-system {
+            background: url('https://i.imgur.com/1bX5QH6.png') repeat;
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 0 auto;
+            max-width: 400px;
+            min-height: 400px;
+            position: relative;
+            box-shadow: 0 0 10px #0003;
+        }
+        .sun {
+            position: absolute;
+            left: 50%; top: 50%;
+            transform: translate(-50%, -50%);
+            width: 120px; height: 120px;
+            background: radial-gradient(circle, #ffe14b 70%, #ffb800 100%);
+            border-radius: 50%;
+            box-shadow: 0 0 40px 10px #ffe14b88;
+            z-index: 2;
+        }
+        .orbit {
+            position: absolute;
+            left: 50%; top: 50%;
+            border: 1px solid #fff2;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .orbit1 { width: 160px; height: 160px; }
+        .orbit2 { width: 200px; height: 200px; }
+        .orbit3 { width: 240px; height: 240px; }
+        .orbit4 { width: 280px; height: 280px; }
+        .orbit5 { width: 320px; height: 320px; }
+        .orbit6 { width: 360px; height: 360px; }
+        .orbit7 { width: 400px; height: 400px; }
+        .orbit8 { width: 440px; height: 440px; }
+        .planet {
+            position: absolute;
+            font-size: 0.9rem;
+            font-weight: bold;
+            color: #fff;
+            padding: 2px 8px;
+            border-radius: 50px;
+            background: #222b;
+            left: 100%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .mercury { background: #e0e0e0; color: #222; }
+        .venus   { background: #ffe4a1; color: #222; }
+        .earth   { background: #3fa9f5; }
+        .mars    { background: #ff4d2d; }
+        .jupiter { background: #ffe4b1; color: #222; }
+        .saturn  { background: #f5e7b2; color: #222; }
+        .uranus  { background: #b2f5f5; color: #222; }
+        .neptune { background: #2d4dff; }
+    </style>
+</head>
+<body>
+    <header class="solar-header">
+        <span class="logo">Nasa Planets</span>
+        <div class="dropdown">
+            <button class="menu-btn">
+                <span class="menu-icon">&#9776;</span> sistema-solar <span class="arrow">&#9660;</span>
+            </button>
+            <div class="dropdown-content">
+                <a href="sistema-solar.html"><span class="icon">☀</span> sistema-solar</a>
+                <a href="quiz.html"><span class="icon">❓</span> Preguntas</a>
+                <a href="apod.html"><span class="icon">⭐</span> APOD (Service)</a>
+                <a href="asteroides.html"><span class="icon">🚀</span> Asteroides</a>
+                <a href="cazador.html"><span class="icon">🎮</span> Cazador de Asteroides</a>
+                <a href="index.html"><span class="icon">🏠</span> secciones</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="solar-section">
+            <h2><span class="emoji">☀️</span> Sistema Solar</h2>
+            <div class="solar-system">
+                <div class="sun"></div>
+                <div class="orbit orbit1"><span class="planet mercury">Mercury</span></div>
+                <div class="orbit orbit2"><span class="planet venus">Venus</span></div>
+                <div class="orbit orbit3"><span class="planet earth">Earth</span></div>
+                <div class="orbit orbit4"><span class="planet mars">Mars</span></div>
+                <div class="orbit orbit5"><span class="planet jupiter">Jupiter</span></div>
+                <div class="orbit orbit6"><span class="planet saturn">Saturn</span></div>
+                <div class="orbit orbit7"><span class="planet uranus">Uranus</span></div>
+                <div class="orbit orbit8"><span class="planet neptune">Neptune</span></div>
+            </div>
+        </section>
+    </main>
+</body>
+</html> 

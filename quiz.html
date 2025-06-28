@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Nasa Planets - Quiz Planetario</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: #181c2f;
+            color: #fff;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .quiz-header {
+            background: #181c2f;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #22243a;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 2rem 0.5rem 2rem;
+        }
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ffe14b;
+            letter-spacing: 2px;
+        }
+        .menu-btn {
+            background: #ffe14b;
+            color: #181c2f;
+            border: none;
+            border-radius: 8px;
+            padding: 0.7rem 1.5rem;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .menu-icon {
+            font-size: 1.3rem;
+        }
+        .arrow {
+            font-size: 1rem;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: #fff;
+            min-width: 220px;
+            box-shadow: 0 8px 16px 0 #0003;
+            border-radius: 10px;
+            z-index: 1;
+            margin-top: 8px;
+            padding: 0.5rem 0;
+        }
+        .dropdown-content a {
+            color: #25304a;
+            padding: 0.7rem 1.2rem;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            font-size: 1.1rem;
+            border-bottom: 1px solid #f0f0f0;
+            transition: background 0.2s;
+        }
+        .dropdown-content a:last-child {
+            border-bottom: none;
+        }
+        .dropdown-content a:hover {
+            background-color: #f5f5f5;
+        }
+        .dropdown:hover .dropdown-content,
+        .dropdown:focus-within .dropdown-content {
+            display: block;
+        }
+        .icon {
+            font-size: 1.3rem;
+        }
+        .quiz-section {
+            background: #13162b url('https://i.imgur.com/1bX5QH6.png') repeat;
+            border-radius: 12px;
+            padding: 2rem 1rem;
+            max-width: 400px;
+            margin: 2rem auto 0 auto;
+            box-shadow: 0 0 10px #0003;
+            text-align: center;
+        }
+        .quiz-section h2 {
+            color: #ffe14b;
+            font-size: 1.7rem;
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            justify-content: center;
+        }
+        .quiz-section .question {
+            color: #00cfff;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+        }
+        .quiz-options {
+            display: flex;
+            flex-direction: column;
+            gap: 1.1rem;
+        }
+        .quiz-option {
+            background: #23294a;
+            color: #fff;
+            border: 2px solid #00cfff;
+            border-radius: 14px;
+            padding: 0.9rem 0;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s;
+        }
+        .quiz-option:hover {
+            background: #00cfff;
+            color: #23294a;
+        }
+    </style>
+</head>
+<body>
+    <header class="quiz-header">
+        <span class="logo">Nasa Planets</span>
+        <div class="dropdown">
+            <button class="menu-btn">
+                <span class="menu-icon">&#9776;</span> Preguntas <span class="arrow">&#9660;</span>
+            </button>
+            <div class="dropdown-content">
+                <a href="sistema-solar.html"><span class="icon">☀</span> sistema-solar</a>
+                <a href="quiz.html"><span class="icon">❓</span> Preguntas</a>
+                <a href="apod.html"><span class="icon">⭐</span> APOD (Service)</a>
+                <a href="asteroides.html"><span class="icon">🚀</span> Asteroides</a>
+                <a href="cazador.html"><span class="icon">🎮</span> Cazador de Asteroides</a>
+                <a href="index.html"><span class="icon">🏠</span> secciones</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="quiz-section">
+            <h2><span class="emoji">🚀</span> Quiz Planetario</h2>
+            <div class="question">¿Cuál es el planeta más grande del sistema solar?</div>
+            <div class="quiz-options">
+                <div class="quiz-option">Marte</div>
+                <div class="quiz-option">Júpiter</div>
+                <div class="quiz-option">Saturno</div>
+                <div class="quiz-option">Neptuno</div>
+            </div>
+        </section>
+    </main>
+</body>
+</html> 

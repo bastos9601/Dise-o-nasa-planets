@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Nasa Planets - Cazador de Asteroides (Juego)</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: #181c2f;
+            color: #fff;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .cazador-header {
+            background: #181c2f;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #22243a;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 2rem 0.5rem 2rem;
+        }
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ffe14b;
+            letter-spacing: 2px;
+        }
+        .menu-btn {
+            background: #ffe14b;
+            color: #181c2f;
+            border: none;
+            border-radius: 8px;
+            padding: 0.7rem 1.5rem;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .menu-icon {
+            font-size: 1.3rem;
+        }
+        .arrow {
+            font-size: 1rem;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: #fff;
+            min-width: 220px;
+            box-shadow: 0 8px 16px 0 #0003;
+            border-radius: 10px;
+            z-index: 1;
+            margin-top: 8px;
+            padding: 0.5rem 0;
+        }
+        .dropdown-content a {
+            color: #25304a;
+            padding: 0.7rem 1.2rem;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            font-size: 1.1rem;
+            border-bottom: 1px solid #f0f0f0;
+            transition: background 0.2s;
+        }
+        .dropdown-content a:last-child {
+            border-bottom: none;
+        }
+        .dropdown-content a:hover {
+            background-color: #f5f5f5;
+        }
+        .dropdown:hover .dropdown-content,
+        .dropdown:focus-within .dropdown-content {
+            display: block;
+        }
+        .icon {
+            font-size: 1.3rem;
+        }
+        .juego-section {
+            background: #13162b url('https://i.imgur.com/1bX5QH6.png') repeat;
+            border-radius: 12px;
+            padding: 2rem 1rem 2.5rem 1rem;
+            max-width: 430px;
+            margin: 2rem auto 0 auto;
+            box-shadow: 0 0 10px #0003;
+        }
+        .juego-status {
+            color: #fff;
+            font-size: 1.05rem;
+            font-weight: bold;
+            margin-bottom: 1.2rem;
+            text-align: left;
+        }
+        .juego-status .vidas {
+            color: #ff4d4d;
+            font-size: 1.2rem;
+            margin: 0 0.2rem;
+        }
+        .asteroide-card {
+            background: #181c2f;
+            border-radius: 14px;
+            border: 3px solid #00cfff;
+            padding: 1.5rem 1rem 1.2rem 1rem;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        .asteroide-card img {
+            width: 70px;
+            margin-bottom: 0.7rem;
+        }
+        .asteroide-card .asteroide-title {
+            color: #ffe14b;
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 0.7rem;
+        }
+        .asteroide-card .asteroide-info {
+            color: #fff;
+            font-size: 1.05rem;
+            margin-bottom: 0.2rem;
+        }
+        .asteroide-card .asteroide-desc {
+            color: #00cfff;
+            font-size: 1rem;
+            margin-top: 0.7rem;
+            font-style: italic;
+        }
+        .juego-actions {
+            display: flex;
+            gap: 1.2rem;
+            justify-content: center;
+        }
+        .juego-btn {
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            padding: 0.8rem 1.2rem;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: background 0.2s, color 0.2s;
+        }
+        .juego-btn.desviar {
+            background: #0074e4;
+            color: #fff;
+        }
+        .juego-btn.ignorar {
+            background: #ffb800;
+            color: #23232b;
+        }
+        .juego-btn.destruir {
+            background: #ff4d2d;
+            color: #fff;
+        }
+        .juego-btn.desviar:hover {
+            background: #005bb5;
+        }
+        .juego-btn.ignorar:hover {
+            background: #ffe14b;
+        }
+        .juego-btn.destruir:hover {
+            background: #b30000;
+        }
+    </style>
+</head>
+<body>
+    <header class="cazador-header">
+        <span class="logo">Nasa Planets</span>
+        <div class="dropdown">
+            <button class="menu-btn">
+                <span class="menu-icon">&#9776;</span> Cazador de Asteroides <span class="arrow">&#9660;</span>
+            </button>
+            <div class="dropdown-content">
+                <a href="sistema-solar.html"><span class="icon">☀</span> sistema-solar</a>
+                <a href="quiz.html"><span class="icon">❓</span> Preguntas</a>
+                <a href="apod.html"><span class="icon">⭐</span> APOD (Service)</a>
+                <a href="asteroides.html"><span class="icon">🚀</span> Asteroides</a>
+                <a href="cazador.html"><span class="icon">🎮</span> Cazador de Asteroides</a>
+                <a href="index.html"><span class="icon">🏠</span> secciones</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="juego-section">
+            <div class="juego-status">
+                Puntuación: 0
+                Vidas: <span class="vidas">❤️❤️❤️</span>
+                Nivel: 1
+                Tiempo: 27s
+            </div>
+            <div class="asteroide-card">
+                <img src="https://www.pngarts.com/files/12/Space-Asteroid-PNG-Image.png" alt="Asteroide" />
+                <div class="asteroide-title">Asteroide Carbonáceo</div>
+                <div class="asteroide-info">Tamaño: Grande</div>
+                <div class="asteroide-info">Velocidad: Lento</div>
+                <div class="asteroide-info">Peligro: Medio</div>
+                <div class="asteroide-desc">Oscuro y difícil de detectar</div>
+            </div>
+            <div class="juego-actions">
+                <button class="juego-btn desviar">🛡️ Desviar</button>
+                <button class="juego-btn ignorar">👁️ Ignorar</button>
+                <button class="juego-btn destruir">💥 Destruir</button>
+            </div>
+        </section>
+    </main>
+</body>
+</html> 
